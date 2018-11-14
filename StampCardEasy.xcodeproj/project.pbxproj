@@ -16,11 +16,11 @@
 		DB547193219B4DF90000D93A /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB547192219B4DF90000D93A /* ItemTableViewCell.swift */; };
 		DB547195219B4E550000D93A /* StampCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB547194219B4E550000D93A /* StampCardViewController.swift */; };
 		DBE3CF38219CA823001EE3D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBE3CF37219CA823001EE3D0 /* GoogleService-Info.plist */; };
+		DBE3CF3A219CCC7C001EE3D0 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE3CF39219CCC7C001EE3D0 /* QRCodeViewController.swift */; };
 		F4F09DB71DAF669400026BB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F09DB61DAF669400026BB2 /* AppDelegate.swift */; };
 		F4F09DBC1DAF669400026BB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F09DBA1DAF669400026BB2 /* Main.storyboard */; };
 		F4F09DBE1DAF669400026BB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F09DBD1DAF669400026BB2 /* Assets.xcassets */; };
 		F4F09DC11DAF669400026BB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F09DBF1DAF669400026BB2 /* LaunchScreen.storyboard */; };
-		F4F09DC91DAF6A3800026BB2 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F09DC81DAF6A3800026BB2 /* QRCodeViewController.swift */; };
 		F4F09DCB1DAF6A4F00026BB2 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F09DCA1DAF6A4F00026BB2 /* QRScannerController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,13 +35,13 @@
 		DB547192219B4DF90000D93A /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		DB547194219B4E550000D93A /* StampCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StampCardViewController.swift; sourceTree = "<group>"; };
 		DBE3CF37219CA823001EE3D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DBE3CF39219CCC7C001EE3D0 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		F4F09DB31DAF669400026BB2 /* StampCardEasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StampCardEasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F09DB61DAF669400026BB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4F09DBB1DAF669400026BB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4F09DBD1DAF669400026BB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4F09DC01DAF669400026BB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4F09DC21DAF669400026BB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4F09DC81DAF6A3800026BB2 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		F4F09DCA1DAF6A4F00026BB2 /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		FDD1B1EF80C2381F6335ADFA /* Pods-StampCardEasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StampCardEasy.release.xcconfig"; path = "Pods/Target Support Files/Pods-StampCardEasy/Pods-StampCardEasy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,8 +99,8 @@
 				F4F09DB61DAF669400026BB2 /* AppDelegate.swift */,
 				DB547188219B4C4C0000D93A /* SignInViewController.swift */,
 				DB54718A219B4CD80000D93A /* MainViewController.swift */,
-				F4F09DC81DAF6A3800026BB2 /* QRCodeViewController.swift */,
 				F4F09DCA1DAF6A4F00026BB2 /* QRScannerController.swift */,
+				DBE3CF39219CCC7C001EE3D0 /* QRCodeViewController.swift */,
 				F4F09DBA1DAF669400026BB2 /* Main.storyboard */,
 				DB54718C219B4D5B0000D93A /* ProfileViewController.swift */,
 				DB54718E219B4DAF0000D93A /* SettingsViewController.swift */,
@@ -249,8 +249,8 @@
 				DB547189219B4C4C0000D93A /* SignInViewController.swift in Sources */,
 				DB54718F219B4DAF0000D93A /* SettingsViewController.swift in Sources */,
 				DB547193219B4DF90000D93A /* ItemTableViewCell.swift in Sources */,
+				DBE3CF3A219CCC7C001EE3D0 /* QRCodeViewController.swift in Sources */,
 				DB547195219B4E550000D93A /* StampCardViewController.swift in Sources */,
-				F4F09DC91DAF6A3800026BB2 /* QRCodeViewController.swift in Sources */,
 				F4F09DB71DAF669400026BB2 /* AppDelegate.swift in Sources */,
 				F4F09DCB1DAF6A4F00026BB2 /* QRScannerController.swift in Sources */,
 				DB547191219B4DDE0000D93A /* SettingsListViewController.swift in Sources */,

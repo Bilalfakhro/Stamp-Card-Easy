@@ -76,19 +76,27 @@ class MainViewController: UIViewController {
     self.performSegue(withIdentifier: "settingsSegue", sender: self)
     }
     
-    @IBAction func loggoutButton(_ sender: Any) {
+    @IBAction func logoutButton(_ sender: Any) {
         print("Log out")
         
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+    /*
         do {
             try Auth.auth().signOut()
             let signInViewController = SignInViewController()
             let signInNavigationController = UINavigationController(rootViewController: signInViewController)
-            self.present(signInNavigationController, animated: true, completion: nil)
+            self.present(signInNavigationController, animated: false, completion: nil)
         } catch let error {
-            print(error)
+            print("Failed to sign out with error",error)
         }
-        
     }
+ */
     /*
     func createAlert (title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -101,5 +109,6 @@ class MainViewController: UIViewController {
         
     }
     */
+}
 }
 
