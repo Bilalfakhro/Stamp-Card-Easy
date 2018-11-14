@@ -95,20 +95,27 @@ class QRScannerController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func launchApp(decodedURL: String) {
+    func launchApp(StampCard: String) {
+  //  func launchApp(decodedURL: String)
         
         if presentedViewController != nil {
             return
         }
         
-        let alertPrompt = UIAlertController(title: "Open App", message: "You're going to open \(decodedURL)", preferredStyle: .actionSheet)
+        let alertPrompt = UIAlertController(title: "Open App", message: "You're going to get a new stamp \(StampCard)", preferredStyle: .actionSheet)
         let confirmAction = UIAlertAction(title: "Confirm", style: UIAlertAction.Style.default, handler: { (action) -> Void in
             
-            if let url = URL(string: decodedURL) {
-                if UIApplication.shared.canOpenURL(url) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    /*    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                
+            let dest = segue.destination as! StampCardViewController
+            
+            } */
+        /*
+            if let stamp = Stamp(string: StampCard) {
+                if UIApplication.shared.sendAction(String, to: StampCardViewController, from: self, for: UIEvent?) {
+                    UIApplication.shared.open(erfl, options: [:], completionHandler: nil)
                 }
-            }
+            }*/
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
@@ -118,7 +125,6 @@ class QRScannerController: UIViewController {
         
         present(alertPrompt, animated: true, completion: nil)
     }
-    
 }
 
 extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
@@ -135,12 +141,12 @@ extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
         let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         
         if supportedCodeTypes.contains(metadataObj.type) {
-            // If the found metadata is equal to the QR code metadata (or barcode) then update the status label's text and set the bounds
+            // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
             let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                launchApp(decodedURL: metadataObj.stringValue!)
+                launchApp(StampCard: metadataObj.stringValue!)
                 messageLabel.text = metadataObj.stringValue
             }
         }
