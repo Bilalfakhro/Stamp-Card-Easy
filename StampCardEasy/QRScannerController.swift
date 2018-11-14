@@ -129,7 +129,6 @@ extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
             qrCodeFrameView?.frame = CGRect.zero
             messageLabel.text = "No QR code is detected"
             return
-            
         }
         
         // Get the metadata object.
