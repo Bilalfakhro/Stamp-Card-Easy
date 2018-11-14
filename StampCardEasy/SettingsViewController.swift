@@ -79,7 +79,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
         if let theSavedList = UserDefaults.standard.object(forKey: "items") as? [String]
         {
             theItems = [theSavedList]
@@ -96,14 +95,11 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let dest = segue.destination as! SettingsListViewController
-        
         let indexpath = sender as! IndexPath
-        
         dest.theitem = theItems[indexpath.section][indexpath.row]
     }
     
     @IBAction func backHomeButtonTapped(_ sender: Any) {
-        print("Back Home!")
         self.dismiss(animated: false, completion: nil)
     }
   

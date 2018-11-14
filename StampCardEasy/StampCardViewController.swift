@@ -8,7 +8,6 @@
 
 import UIKit
 import FirebaseDatabase
-import MessageUI
 
 class StampCardViewController: UIViewController {
     
@@ -208,31 +207,15 @@ class StampCardViewController: UIViewController {
             box9.setImage(boxOff, for: UIControl.State.normal)
         }
     }
-
-    @IBAction func stampCardFacebook(_ sender: Any) {
-        print("Facebook")
-        
-    }
-    @IBAction func stampCardInstagram(_ sender: Any) {
-        print("Instagram")
-    }
-    @IBAction func stampCardContact(_ sender: Any) {
-        print("Contact")
-    }
     
     @IBAction func stampCardBackHome(_ sender: Any) {
-        print("Back Home!")
         self.dismiss(animated: false, completion: nil)
-    }
-    
-    @IBAction func logoutButton(_ sender: Any) {
-        print("Logged out")
     }
  
     @IBAction func addLunch(_ sender: Any) {
         
         // Post a data to firebase
-    ref?.child("Valfarden").child("Lunch").child("Antal").childByAutoId().setValue("0")
+        ref?.child("Valfarden").child("Lunch").child("Antal").childByAutoId().setValue("0")
     }
 }
 

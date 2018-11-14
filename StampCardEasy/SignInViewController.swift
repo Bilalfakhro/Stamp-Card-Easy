@@ -29,8 +29,6 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func segmentSelectorTapped(_ sender: UISegmentedControl) {
-        print("Sign button tapped")
-        
         // Flip the Boolean
         isSignIn = !isSignIn
         
@@ -46,8 +44,6 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signinButtonTapped(_ sender: UIButton) {
-        print("Sign button tapped")
-        
         // TODO: Do some form validation on the email and passeord.
         if let email = emailTextfield.text,
             let pass = passwordTextfield.text

@@ -23,7 +23,6 @@ class ProfileViewController: UIViewController {
     
     // BACK HOME
     @IBAction func profileBackHome(_ sender: Any){
-        print("Back Home")
         self.dismiss(animated: false, completion: nil)
     }
     
