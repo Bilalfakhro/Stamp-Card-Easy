@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 @IBDesignable extension UIView {
     @IBInspectable var borderColor:UIColor? {
@@ -77,7 +78,18 @@ class MainViewController: UIViewController {
     
     @IBAction func loggoutButton(_ sender: Any) {
         print("Log out")
+        
+        do {
+            try Auth.auth().signOut()
+            let signInViewController = SignInViewController()
+            let signInNavigationController = UINavigationController(rootViewController: signInViewController)
+            self.present(signInNavigationController, animated: true, completion: nil)
+        } catch let error {
+            print(error)
+        }
+        
     }
+    /*
     func createAlert (title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Log Out", style: UIAlertAction.Style.destructive
@@ -88,5 +100,6 @@ class MainViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         
     }
+    */
 }
 

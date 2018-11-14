@@ -49,7 +49,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // TABLEVIEW behöver en rad.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! itemTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ItemTableViewCell
         cell.itemNameLabel.text = theItems[indexPath.section][indexPath.row]
         
         // Change background Color to trasparent
