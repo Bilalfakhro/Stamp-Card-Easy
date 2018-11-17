@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>272372326730-9fu9bjp0q4mfblbus3svlhjupq1kaqrc.apps.googleusercontent.com</string>
+	<string>905187648913-th9ng0dnf4rdnn64earbdd1cgmv0cfil.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.272372326730-9fu9bjp0q4mfblbus3svlhjupq1kaqrc</string>
+	<string>com.googleusercontent.apps.905187648913-th9ng0dnf4rdnn64earbdd1cgmv0cfil</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBnaA7kUm8MQnuGyo6YolHTPpycxkJ2n44</string>
+	<string>AIzaSyCbyqziuLBTjp6CKIQNvVFa1-uK49BOlng</string>
 	<key>GCM_SENDER_ID</key>
-	<string>272372326730</string>
+	<string>905187648913</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.appcoda.StampCardEasy</string>
+	<string>com.appcoda.stampcardeasy</string>
 	<key>PROJECT_ID</key>
-	<string>stamp-card-easy</string>
+	<string>clicktostampcard</string>
 	<key>STORAGE_BUCKET</key>
-	<string>stamp-card-easy.appspot.com</string>
+	<string>clicktostampcard.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:272372326730:ios:0d1461787ee0f418</string>
+	<string>1:905187648913:ios:bd091a592f428ee6</string>
 	<key>DATABASE_URL</key>
-	<string>https://stamp-card-easy.firebaseio.com</string>
+	<string>https://clicktostampcard.firebaseio.com</string>
 </dict>
 </plist>

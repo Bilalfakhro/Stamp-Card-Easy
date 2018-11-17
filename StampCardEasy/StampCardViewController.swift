@@ -7,10 +7,12 @@
 //
 
 import UIKit
-import FirebaseDatabase
+import Firebase
 
 class StampCardViewController: UIViewController {
     
+    @IBOutlet weak var stampCardLabel: UILabel!
+/*
     @IBOutlet weak var box0: UIButton!
     @IBOutlet weak var box1: UIButton!
     @IBOutlet weak var box2: UIButton!
@@ -24,28 +26,29 @@ class StampCardViewController: UIViewController {
     
     var lunchData = [String]()
     
-    var ref:DatabaseReference?
-    var DatabaseHandler:DatabaseHandle?
-    
-    
     var boxOn = UIImage(named: "checkBox")
     var boxOff = UIImage(named: "unCheckBox")
     
     var isBoxClicked: Bool!
     //    var isBoxHidden: Bool!
-    
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Firebase Database Reference
+        var ref: DatabaseReference!
         ref = Database.database().reference()
-
+        
+        ref.child("users").child("people").setValue("bilal")
+        
+        
+/*
         isBoxClicked = false
         view.backgroundColor = UIColor.white
         
         // Retrieve the post and listenfor changes
-   //   DatabaseHandle =
-        ref?.child("Valfarden").observe(.value, with: { (snappshot) in
+        // DatabaseHandle =
+            ref?.child("Valfarden").observe(.value, with: { (snappshot) in
             
         // Code to excute when a child i changed.
         // Take a value of the snappshot and added it to lunchData array.
@@ -62,6 +65,7 @@ class StampCardViewController: UIViewController {
             }
             }
         })
+         */
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,7 +73,7 @@ class StampCardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func boxZero(_ sender: UIButton) {
+/*    @IBAction func boxZero(_ sender: UIButton) {
         
         if isBoxClicked == true {
             isBoxClicked = false
@@ -90,123 +94,7 @@ class StampCardViewController: UIViewController {
             // box2.isHidden = false
         }
     }
-    
-    @IBAction func boxOne(_ sender: UIButton) {
-        if isBoxClicked == true {
-            isBoxClicked = false
-        } else {
-            isBoxClicked = true
-        }
-        if isBoxClicked == true {
-            box1.setImage(boxOn, for: UIControl.State.normal)
-        } else {
-            box1.setImage(boxOff, for: UIControl.State.normal)
-        }
-    }
-    
-    @IBAction func boxTwo(_ sender: UIButton) {
-        if isBoxClicked == true {
-            isBoxClicked = false
-        } else {
-            isBoxClicked = true
-        }
-        if isBoxClicked == true {
-            box2.setImage(boxOn, for: UIControl.State.normal)
-        } else {
-            box2.setImage(boxOff, for: UIControl.State.normal)
-        }
-    }
-    
-    @IBAction func boxThree(_ sender: UIButton) {
-        if isBoxClicked == true {
-            isBoxClicked = false
-        } else {
-            isBoxClicked = true
-        }
-        if isBoxClicked == true {
-            box3.setImage(boxOn, for: UIControl.State.normal)
-        } else {
-            box3.setImage(boxOff, for: UIControl.State.normal)
-        }
-    }
-    
-    @IBAction func boxFour(_ sender: UIButton) {
-        if isBoxClicked == true {
-            isBoxClicked = false
-        } else {
-            isBoxClicked = true
-        }
-        if isBoxClicked == true {
-            box4.setImage(boxOn, for: UIControl.State.normal)
-        } else {
-            box4.setImage(boxOff, for: UIControl.State.normal)
-        }
-    }
-    
-    @IBAction func boxFive(_ sender: UIButton) {
-        if isBoxClicked == true {
-            isBoxClicked = false
-        } else {
-            isBoxClicked = true
-        }
-        if isBoxClicked == true {
-            box5.setImage(boxOn, for: UIControl.State.normal)
-        } else {
-            box5.setImage(boxOff, for: UIControl.State.normal)
-        }
-    }
-    
-    @IBAction func boxSix(_ sender: UIButton) {
-        if isBoxClicked == true {
-            isBoxClicked = false
-        } else {
-            isBoxClicked = true
-        }
-        if isBoxClicked == true {
-            box6.setImage(boxOn, for: UIControl.State.normal)
-        } else {
-            box6.setImage(boxOff, for: UIControl.State.normal)
-        }
-    }
-    
-    @IBAction func boxSeven(_ sender: UIButton) {
-        if isBoxClicked == true {
-            isBoxClicked = false
-        } else {
-            isBoxClicked = true
-        }
-        if isBoxClicked == true {
-            box7.setImage(boxOn, for: UIControl.State.normal)
-        } else {
-            box7.setImage(boxOff, for: UIControl.State.normal)
-        }
-    }
-    
-    @IBAction func boxEight(_ sender: UIButton) {
-        if isBoxClicked == true {
-            isBoxClicked = false
-        } else {
-            isBoxClicked = true
-        }
-        if isBoxClicked == true {
-            box8.setImage(boxOn, for: UIControl.State.normal)
-        } else {
-            box8.setImage(boxOff, for: UIControl.State.normal)
-        }
-    }
-    
-    @IBAction func boxNine(_ sender: UIButton) {
-        if isBoxClicked == true {
-            isBoxClicked = false
-        } else {
-            isBoxClicked = true
-        }
-        if isBoxClicked == true {
-            box9.setImage(boxOn, for: UIControl.State.normal)
-        } else {
-            box9.setImage(boxOff, for: UIControl.State.normal)
-        }
-    }
+    */
     
     @IBAction func stampCardBackHome(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
@@ -214,8 +102,9 @@ class StampCardViewController: UIViewController {
  
     @IBAction func addLunch(_ sender: Any) {
         
-        // Post a data to firebase
-        ref?.child("Valfarden").child("Lunch").child("Antal").childByAutoId().setValue("0")
+    // Post a data to firebase
+       
+        
     }
 }
 

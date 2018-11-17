@@ -6,10 +6,12 @@ target 'StampCardEasy' do
   use_frameworks!
 
   # Pods for StampCardEasy
-    pod 'Firebase/Core'
-    pod 'Firebase/Database'
-    pod 'Firebase/Auth'
-    pod 'Firebase/Storage'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Storage'
+    
     
 
 end

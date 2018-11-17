@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FirebaseAuth
+import Firebase
 
 @IBDesignable extension UIView {
     @IBInspectable var borderColor:UIColor? {
@@ -70,12 +70,26 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func logoutButton(_ sender: Any) {
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
+        let signOutController = SignInViewController()
+        let signInNavigationController = UINavigationController(rootViewController: signOutController)
+        
+        let alert = UIAlertController(title: "My Title", message: "My Message", preferredStyle: .alert)
+        
+        let actionYes = UIAlertAction(title: "Yes", style: .default, handler: { action in
+            print("action yes handler")
+        })
+        
+        let actionCancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { action in
+            print("action cancel handler")
+        })
+        
+        alert.addAction(actionYes)
+        alert.addAction(actionCancel)
+        
+        DispatchQueue.main.async {
+        self.present(signInNavigationController, animated: true, completion: nil)
         }
+        
     }
 }
 

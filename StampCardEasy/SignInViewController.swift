@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FirebaseAuth
+import Firebase
 
 class SignInViewController: UIViewController {
     
@@ -22,6 +22,7 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,35 +51,35 @@ class SignInViewController: UIViewController {
         {
             // Check if it's sign in or register
             if isSignIn {
-                // Sign in user with Firebase
-              Auth.auth().signIn(withEmail: email, password: pass, completion: { (user, error) in
+            // Sign in user with Firebase
+            Auth.auth().signIn(withEmail: email, password: pass, completion: { (user, error) in
                     
-                    // Check that user isn't nil
-                    if user != nil {
-                        // User is found, go to home screen
-                        self.performSegue(withIdentifier: "goToHomeSegue", sender: self)
-                    }
-                    else {
-                        // Error: check error and show message
-                    }
-                }) 
+            // Check that user isn't nil
+            if user != nil {
+            // User is found, go to home screen
+            self.performSegue(withIdentifier: "goToHomeSegue", sender: self)
             }
             else {
-                // Register the user with Firebase
-                Auth.auth().createUser(withEmail: email, password: pass, completion: { (user, error) in
-                    
-                    // Check that user isn't nill
-                    if user != nil {
-                        // User is found, go to home screen
-                        self.performSegue(withIdentifier: "goToHomeSegue", sender: self)
-                    }
-                    else {
-                        // Error: check error and show message
-                    }
-                })
+            // Error: check error and show message
             }
+            })
+        }
+        else {
+            // Register the user with Firebase
+            Auth.auth().createUser(withEmail: email, password: pass, completion:{ (user, error) in
+                
+            // Check that user isn't nill
+            if user != nil {
+            // User is found, go to home screen
+            self.performSegue(withIdentifier: "goToHomeSegue", sender: self)
+            }
+            else {
+            // Error: check error and show message
+            }
+            })
         }
     }
+}
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
